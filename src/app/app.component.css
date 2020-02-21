@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito&display=swap');
+
+*,
+*::after,
+*::before {
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e2e1e0;
+}
+
+.app-container {
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title,
+.loading {
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3em;
+  box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.search-input {
+  font-size: 15px;
+  background: none;
+  border: none;
+  padding-left: 10px;
+  flex: 1;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-btn {
+  display: inline-flex;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+.icon-btn.clear-btn:hover {
+  font-size: 20px;
+  background: #f7f7f7;
+}
+
+.loading:after {
+  content: '..';
+  animation: dots 1s steps(8, end) infinite;
+}
+
+@keyframes dots {
+
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 4px 0 0 rgba(0, 0, 0, 0), 8px 0 0 rgba(0, 0, 0, 0);
+  }
+
+  40% {
+    color: black;
+    text-shadow: 4px 0 0 rgba(0, 0, 0, 0), 8px 0 0 rgba(0, 0, 0, 0);
+  }
+
+  60% {
+    text-shadow: 4px 0 0 black, 8px 0 0 rgba(0, 0, 0, 0);
+  }
+
+  80%,
+  100% {
+    text-shadow: 4px 0 0 white, 8px 0 0 white;
+  }
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.movie-card {
+  border: 1px;
+  width: 300px;
+  padding: 5px;
+  /* background: #333333;
+  color: #f7f7f7; */
+  margin: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-poster {
+  width: 300px;
+  height: 300px;
+}
+
+.movie-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.movie-details {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-title {
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 18px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.movie-year,
+.movie-type,
+.movie-year {
+  font-family: 'Nunito';
+  font-size: 12px;
+}
